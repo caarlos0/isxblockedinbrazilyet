@@ -129,7 +129,7 @@
     <div class="container">
       <div>
         <h1>Is 𝕏 blocked in Brazil yet?</h1>
-        <h2>yes</h2>
+        <h2 id="blockStatus">yes</h2>
       </div>
     </div>
     <footer>
@@ -195,5 +195,18 @@
       </div>
       <p>Please do not share this with anyone.</p>
     </footer>
+    <script>
+      const blockMessages = [
+        "yes",
+        "ohh we're cooked",
+        "yes, but no one gives a shit",
+        "VPNs are going brrrrr",
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("blockStatus").textContent =
+          blockMessages[Math.floor(Math.random() * blockMessages.length)];
+      });
+    </script>
   </body>
 </html>
